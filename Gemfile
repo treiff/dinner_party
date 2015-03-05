@@ -23,4 +23,3 @@ group :development, :test do
   # Use rubocop for linting
   gem 'rubocop', '~> 0.29.1'
 end
-
