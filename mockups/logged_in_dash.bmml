@@ -1,0 +1,94 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="829" measuredH="613" mockupW="800" mockupH="600">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="13" w="800" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>A%20Web%20Page%0Ahttp%3A//groupdinner.com/dash</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::LinkBar" x="51" y="103" w="-1" h="-1" measuredW="153" measuredH="19" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>landing_page%26bm%3Blanding_page.bmml%26bm%3Blanding_page.bmml%26bm%3Blanding_page.bmml%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2222%2C92%2C56%2C105%22%20href%3D%22landing_page.bmml%22%20alt%3D%22landing_page%22%20id%3D%225%22/%3E</map>
+        <selectedIndex>-1</selectedIndex>
+        <text>Home%2C%20About%2C%20Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::LinkBar" x="752" y="103" w="-1" h="-1" measuredW="45" measuredH="19" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>%2C%20Help</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::HRule" x="51" y="127" w="756" h="-1" measuredW="100" measuredH="10" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::SubTitle" x="303" y="162" w="-1" h="-1" measuredW="253" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welcome%2C%20current_user</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::ComboBox" x="649" y="100" w="-1" h="-1" measuredW="108" measuredH="62" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>current_user%0Aedit%20profile%0Alogout</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="587" y="102" w="-1" h="-1" measuredW="56" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welcome%2C</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::HRule" x="653" y="137" w="-1" h="-1" measuredW="100" measuredH="10" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="__group__" x="435" y="216" w="360" h="110" measuredW="360" measuredH="110" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>dinner_show%26bm%3Bdinner_show.bmml%26bm%3Bdinner_show.bmml%26bm%3Bdinner_show.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22406%2C203%2C766%2C313%22%20href%3D%22dinner_show.bmml%22%20alt%3D%22dinner_show%22%20id%3D%2234%22/%3E</map>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="124" measuredH="21" zOrder="0" locked="false" isInGroup="34">
+          <controlProperties>
+            <text>Dinners%20Im%20attending</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="0" y="29" w="-1" h="-1" measuredW="360" measuredH="81" zOrder="1" locked="false" isInGroup="34">
+          <controlProperties>
+            <text>Nickname%2C%20Date%20%5Ev%2C%20Time%2C%20Bringing%2C%20Reminder%3F%0ASeafood%20mania%2C%205/16/15%2C%204%3A30pm%2C%20Lobster%2C%20%5Bx%5D%0AJans%20dinnerr%2C%202/02/15%2C%205%3A00pm%2C%20Potatos%2C%20%5B%5D</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="38" controlTypeID="__group__" x="62" y="216" w="304" h="145" measuredW="304" measuredH="145" zOrder="9" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="6" controlTypeID="__group__" x="0" y="0" w="304" h="145" measuredW="304" measuredH="145" zOrder="0" locked="false" isInGroup="38">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="111" measuredH="21" zOrder="0" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>Dinners%20Im%20hosting</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::DataGrid" x="0" y="29" w="-1" h="-1" measuredW="304" measuredH="116" zOrder="1" locked="false" isInGroup="6">
+              <controlProperties>
+                <text>Nickname%2C%20Date%20%5Ev%2C%20Time%2C%20Attending%0ACrazy%20Taco%20Party%2C%203/21/15%2C%207%3A00pm%2C%20Joe%5Cr%20Kim%5Cr%20Sam%5Cr%20Kate%0AFam%20Dinner%2C%204/02/15%2C%205%3A00pm%2C%20Luke%5Cr%20</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Button" x="62" y="369" w="-1" h="-1" measuredW="86" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>new_event%26bm%3Bnew_event.bmml%26bm%3Bnew_event.bmml%26bm%3Bnew_event.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2233%2C356%2C119%2C383%22%20href%3D%22new_event.bmml%22%20alt%3D%22new_event%22%20id%3D%2239%22/%3E</map>
+        <text>New%20Event</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Arrow" x="485" y="323" w="149" h="118" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dinners%20clickable%20to%20view%20%22details%20page%22</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
