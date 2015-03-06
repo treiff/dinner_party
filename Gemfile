@@ -20,6 +20,13 @@ group :development, :test do
   gem 'spring'
   # Use rspec for testing
   gem 'rspec-rails', '~> 3.2.1'
+  # Use capybara for integration tests
+  gem 'capybara', '~> 2.4.4'
+end
+
+group :development do
   # Use rubocop for linting
   gem 'rubocop', '~> 0.29.1'
+  # Use quiet assets to clean up server output
+  gem 'quiet_assets', '~> 1.1.0'
 end
