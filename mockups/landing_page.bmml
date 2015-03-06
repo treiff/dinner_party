@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="829" measuredH="613" mockupW="800" mockupH="600">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="829" measuredH="794" mockupW="800" mockupH="781">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="13" w="800" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -46,6 +46,11 @@
         <href>new_user%26bm%3Bnew_user.bmml%26bm%3Bnew_user.bmml%26bm%3Bnew_user.bmml</href>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22368%2C275%2C432%2C302%22%20href%3D%22new_user.bmml%22%20alt%3D%22new_user%22%20id%3D%2213%22/%3E</map>
         <text>Signup</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::StickyNote" x="622" y="671" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Combine%20landing%20page%20with%20-%20event%20create%20page.</text>
       </controlProperties>
     </control>
   </controls>
