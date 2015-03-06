@@ -1,18 +1,18 @@
+require 'rails_helper'
+
 feature 'User creates a dinner' do
   scenario 'with valid inputs' do
     visit root_path
-    fill_in_dinner
-    expect(find_dinner("Joes awesome BBQ")).to be_present
+    fill_form
+    expect(find_dinner("trevor@example.com")).to be_present
   end
 
-  def fill_in_dinner
-    fill_in 'Name', with: "Joes awesome BBQ"
-    fill_in 'Date', with: Time.new(2015, 05, 17)
-    fill_in 'Time', with: Time.now.strftime("%H:%M")
-    fill_in 'Location', with: "My house"
-    fill_in 'Email', with: "trevor@example.com"
-    check 'Salad'
-    check 'Soup'
+  def fill_form
+    fill_in "dinner", with: "Joes awesome BBQ"
+    fill_in 'date', with: Time.new(2015, 05, 17)
+    fill_in 'time', with: Time.now.strftime("%H:%M")
+    fill_in 'location', with: "My house"
+    fill_in 'email', with: "trevor@example.com"
     click_button 'Create Dinner'
   end
 
