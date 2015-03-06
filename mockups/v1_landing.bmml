@@ -26,9 +26,9 @@
         <text>Time%3A</text>
       </controlProperties>
     </control>
-    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="594" y="220" w="-1" h="-1" measuredW="145" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="569" y="217" w="-1" h="-1" measuredW="205" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>What%20were%20going%20to%20eat%3F</text>
+        <text>What%20do%20you%20want%20people%20to%20bring%3F</text>
       </controlProperties>
     </control>
     <control controlID="51" controlTypeID="com.balsamiq.mockups::DateChooser" x="150" y="268" w="-1" h="-1" measuredW="90" measuredH="25" zOrder="7" locked="false" isInGroup="-1"/>
@@ -98,6 +98,17 @@
     <control controlID="71" controlTypeID="com.balsamiq.mockups::SubTitle" x="210" y="153" w="-1" h="-1" measuredW="396" measuredH="27" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Get%20friends%20together%20for%20dinner%2C%20do%20it.</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Label" x="90" y="386" w="-1" h="-1" measuredW="39" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Email%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::TextInput" x="150" y="383" w="300" h="-1" measuredW="79" measuredH="26" zOrder="23" locked="false" isInGroup="-1"/>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::CheckBox" x="576" y="364" w="-1" h="-1" measuredW="58" measuredH="22" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Drinks</text>
       </controlProperties>
     </control>
   </controls>
