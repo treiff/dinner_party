@@ -1,0 +1,22 @@
+<% provide(:title, "Dinner") %>
+
+<h1>Dinner page</h1>
+
+<%= form_for @dinner do |f| %>
+  <%= f.label :dinner %>:
+  <%= f.text_field :dinner_name, id: "dinner", readonly: true %><br />
+
+  <%= f.label :Date %>:
+  <%= f.date_field :date, id: "date", readonly: true %><br />
+
+  <%= f.label :Time %>:
+  <%= f.time_field :time, id: "time", readonly: true %><br />
+
+  <%= f.label :Location %>:
+  <%= f.text_field :location, id: "location", readonly: true %><br />
+
+  <%= f.label :Email %>:
+  <%= f.text_field :email, id: "email", readonly: true %><br />
+
+  <%= f.submit "Edit Dinner" %>
+<% end %>
