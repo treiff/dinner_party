@@ -1,0 +1,22 @@
+<% provide(:title, "Home") %>
+
+<h1>Home page</h1>
+
+<%= form_for @dinner do |f| %>
+  <%= f.label :dinner %>:
+  <%= f.text_field :dinner_name, id: "dinner" %><br />
+
+  <%= f.label :Date %>:
+  <%= f.date_field :date, id: "date" %><br />
+
+  <%= f.label :Time %>:
+  <%= f.time_field :time, id: "time" %><br />
+
+  <%= f.label :Location %>:
+  <%= f.text_field :location, id: "location" %><br />
+
+  <%= f.label :Email %>:
+  <%= f.text_field :email, id: "email" %><br />
+
+  <%= f.submit "Create Dinner" %>
+<% end %>
