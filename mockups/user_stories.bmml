@@ -141,7 +141,7 @@
     <control controlID="41" controlTypeID="com.balsamiq.mockups::RoundButton" x="620" y="272" w="96" h="126" measuredW="32" measuredH="32" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
         <shape>rectangle</shape>
-        <text>Dinner%20-%20show%20page%20%28RVSP%20with%20dish%29</text>
+        <text>Dinner%20-%20show%20page%20%28RVSP%20and%20add%20dish%29</text>
       </controlProperties>
     </control>
     <control controlID="42" controlTypeID="com.balsamiq.mockups::Arrow" x="661" y="170" w="10" h="87" measuredW="150" measuredH="100" zOrder="29" locked="false" isInGroup="-1">
@@ -158,6 +158,17 @@
       <controlProperties>
         <text>Future%20versions%20%3F%3F</text>
         <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Arrow" x="526" y="326" w="78" h="10" measuredW="150" measuredH="100" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::RoundButton" x="420" y="311" w="102" h="39" measuredW="32" measuredH="32" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>rectangle</shape>
+        <text>table%20updated</text>
       </controlProperties>
     </control>
   </controls>
