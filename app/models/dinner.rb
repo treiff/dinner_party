@@ -1,7 +1,11 @@
 class Dinner < ActiveRecord::Base
-  validates :email, email: true, case_sensitive: false
-  validates :email, :dinner_name, :date, :time, :location, presence: true
-  attr_readonly :email, :dinner_name, :date, :time, :location
+  validates :email, email: true, case_sensitive: false, presence: true
+  validates :name, presence: true
+  validates :date, presence: true
+  validates :time, presence: true
+  validates :location, presence: true
+
+  attr_readonly :email, :name, :date, :time, :location
 
   before_create :generate_unique_url
 

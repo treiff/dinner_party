@@ -32,6 +32,6 @@ class DinnersController < ApplicationController
   private
 
   def dinner_params
-    params.require(:dinner).permit(:dinner_name, :date, :time, :location, :email, :unique_url)
+    params.require(:dinner).permit(:name, :date, :time, :location, :email, :unique_url)
   end
 end

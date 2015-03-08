@@ -8,7 +8,7 @@ feature 'User creates a dinner' do
   end
 
   def fill_form
-    fill_in "dinner", with: "Joes awesome BBQ"
+    fill_in "name", with: "Joes awesome BBQ"
     fill_in 'date', with: Time.new(2015, 05, 17)
     fill_in 'time', with: Time.now.strftime("%H:%M")
     fill_in 'location', with: "My house"
