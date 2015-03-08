@@ -14,8 +14,19 @@ class DinnersController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @dinner = Dinner.find_by_unique_url(params[:id])
+  end
+
+  def update
+    @dinner = Dinner.find_by_unique_url(params[:id])
+    if @dinner.update_attributes(dinner_params)
+      flash[:notice] = "Updated successfully"
+      redirect_to root_path
+    else
+      flash.now[:error] = "Something went wrong"
+      render 'edit'
+    end
   end
 
   private
