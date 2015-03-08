@@ -6,6 +6,7 @@ class Dinner < ActiveRecord::Base
   validates :location, presence: true
 
   has_many :courses
+  has_many :guests
 
   attr_readonly :email, :name, :date, :time, :location
 
