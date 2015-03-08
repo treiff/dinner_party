@@ -5,6 +5,8 @@ class Dinner < ActiveRecord::Base
   validates :time, presence: true
   validates :location, presence: true
 
+  has_many :courses
+
   attr_readonly :email, :name, :date, :time, :location
 
   before_create :generate_unique_url
