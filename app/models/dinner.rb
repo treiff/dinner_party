@@ -6,6 +6,9 @@ class Dinner < ActiveRecord::Base
   validates :location, presence: true
 
   has_many :courses
+  has_many :guests
+
+  accepts_nested_attributes_for :guests, reject_if: lambda { |a| a[:name].blank? }
 
   attr_readonly :email, :name, :date, :time, :location
 
