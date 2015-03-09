@@ -6,7 +6,7 @@ class DinnersController < ApplicationController
   def create
     @dinner = Dinner.new(dinner_params)
     if @dinner.save
-      flash[:notice] = "Copy your link and send to friends: #{@dinner.custom_url}"
+      flash[:notice] = "Here's your link copy and send to friends: #{@dinner.custom_url}"
       redirect_to root_path
     else
       flash.now[:error] = "Please complete all fields"
