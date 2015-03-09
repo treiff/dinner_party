@@ -7,6 +7,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Use email validator to validate email addresses
 gem 'email_validator', '~> 1.5.0'
+# Use bootstrap for styling
+gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'jquery-rails'
 gem 'turbolinks'
