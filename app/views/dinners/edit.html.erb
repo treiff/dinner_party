@@ -1,23 +1,21 @@
 <% provide(:title, "Dinner") %>
 
-<h1>Dinner page</h1>
+<h1><%= @dinner.name %> </h1>
+<h2>Created by: <%= @dinner.email %></h2>
 
+<p>When this is going down: <%= @dinner.date %> at <%= @dinner.time %></p>
+<p>Where: <%= @dinner.location %></p>
+
+<h2>Coming? Please RSVP</h2>
 <%= form_for dinner_setup(@dinner) do |f| %>
-  <%= f.label :dinner %>:
-  <%= f.text_field :name, id: "dinner", readonly: true %><br />
-
-  <%= f.label :Date %>:
-  <%= f.date_field :date, id: "date", readonly: true %><br />
-
-  <%= f.label :Time %>:
-  <%= f.time_field :time, id: "time", readonly: true %><br />
-
-  <%= f.label :Location %>:
-  <%= f.text_field :location, id: "location", readonly: true %><br />
-
     <%= f.fields_for :guests do |g| %>
-      <%= g.label :Guest %>:
+      <%= g.label :Name %>:
       <%= g.text_field :name, id: "name" %><br />
+    <% end %>
+
+    <%= f.fields_for :courses do |g| %>
+      <%= g.label :Dish %>:
+      <%= g.text_field :name, id: "dish_name" %><br />
     <% end %>
 
   <%= f.submit "Edit Dinner" %>
