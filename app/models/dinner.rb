@@ -1,3 +1,4 @@
+# Generates dinner objects
 class Dinner < ActiveRecord::Base
   validates :email, email: true, case_sensitive: false, presence: true
   validates :name, presence: true
