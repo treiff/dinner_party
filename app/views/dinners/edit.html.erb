@@ -2,7 +2,7 @@
 
 <h1>Dinner page</h1>
 
-<%= form_for @dinner do |f| %>
+<%= form_for dinner_setup(@dinner) do |f| %>
   <%= f.label :dinner %>:
   <%= f.text_field :name, id: "dinner", readonly: true %><br />
 
@@ -14,6 +14,11 @@
 
   <%= f.label :Location %>:
   <%= f.text_field :location, id: "location", readonly: true %><br />
+
+    <%= f.fields_for :guests do |g| %>
+      <%= g.label :Guest %>:
+      <%= g.text_field :name, id: "name" %><br />
+    <% end %>
 
   <%= f.submit "Edit Dinner" %>
 <% end %>
