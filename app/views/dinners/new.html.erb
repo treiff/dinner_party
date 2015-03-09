@@ -1,22 +1,33 @@
 <% provide(:title, "Home") %>
 
-<h1>Home page</h1>
+<div class="container">
+  <div class="jumbotron background">
+    <h1 class="text-center">Welcome!</h1>
+    <h2 class="text-center">Lets invite some friends for dinner!</h2>
 
-<%= form_for @dinner do |f| %>
-  <%= f.label :dinner %>:
-  <%= f.text_field :name, id: "name" %><br />
+    <%= form_for @dinner do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>:
+        <%= f.text_field :name, class: 'form-control', placeholder: 'name your dinner' %><br />
+      </div>
 
-  <%= f.label :Date %>:
-  <%= f.date_field :date, id: "date" %><br />
+      <div class="form-group form-inline">
+        <%= f.label :Date %>:
+        <%= f.date_field :date, class: 'form-control' %>
 
-  <%= f.label :Time %>:
-  <%= f.time_field :time, id: "time" %><br />
+        <%= f.label :Time %>:
+        <%= f.time_field :time, class: 'form-control' %>
 
-  <%= f.label :Location %>:
-  <%= f.text_field :location, id: "location" %><br />
+        <%= f.label :Location %>:
+        <%= f.text_field :location, class: 'form-control' %><br />
+      </div>
 
-  <%= f.label :Email %>:
-  <%= f.text_field :email, id: "email" %><br />
+      <div class="form-group">
+        <%= f.label :email %>:
+        <%= f.text_field :email, class: 'form-control', placeholder: 'your email' %><br />
+      </div>
 
-  <%= f.submit "Create Dinner" %>
-<% end %>
+      <%= f.submit "Create Dinner", class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 40px;
+  background: url('cover.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.background {
+  background-color: rgba(255,255,255,0.5);
+  color: inherit;
+}
+
+.form-inline > * {
+  margin: 5px 10px;
+}
