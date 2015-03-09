@@ -33,6 +33,6 @@ class DinnersController < ApplicationController
 
   def dinner_params
     params.require(:dinner).permit(:name, :date, :time, :location, :email, :unique_url, guests_attributes:
-                                  [:name, :id])
+                                  [:name, :id], courses_attributes: [:name, :id])
   end
 end

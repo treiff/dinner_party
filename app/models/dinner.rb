@@ -9,6 +9,7 @@ class Dinner < ActiveRecord::Base
   has_many :guests
 
   accepts_nested_attributes_for :guests, reject_if: lambda { |a| a[:name].blank? }
+  accepts_nested_attributes_for :courses, reject_if: lambda { |a| a[:name].blank? }
 
   attr_readonly :email, :name, :date, :time, :location
 
