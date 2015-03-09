@@ -21,10 +21,10 @@ class DinnersController < ApplicationController
   def update
     @dinner = Dinner.find_by_unique_url(params[:id])
     if @dinner.update_attributes(dinner_params)
-      flash[:notice] = "Updated successfully"
+      flash[:notice] = "Great, see you there!"
       redirect_to root_path
     else
-      flash.now[:error] = "Something went wrong"
+      flash.now[:error] = @dinner.errors.full_messages.to_sentence
       render 'edit'
     end
   end

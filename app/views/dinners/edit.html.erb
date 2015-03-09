@@ -1,39 +1,35 @@
 <% provide(:title, "Dinner") %>
 
-<div class="container">
-  <div class="jumbotron background">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title text-center"><%= @dinner.name %></h3>
-      </div>
-      <div class="panel-body">
-        <p>Hosted by: <%= @dinner.email %></p>
-        <p>When this is going down: <%= @dinner.date %> at <%= @dinner.time %></p>
-        <p>Where: <%= @dinner.location %></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <h2>Coming? Please RSVP</h2>
-      <div class="col-md-6">
-        <%= form_for dinner_setup(@dinner) do |f| %>
-          <div class="form-group">
-            <%= f.fields_for :guests do |g| %>
-              <%= g.label :Name %>:
-              <%= g.text_field :name, class: 'form-control', placeholder: 'your name' %>
-            <% end %>
-          </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <%= f.fields_for :courses do |g| %>
-            <%= g.label :Dish %>:
-            <%= g.text_field :name, class: 'form-control', placeholder: 'your bringing?' %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-      <%= f.submit "RSVP", class: 'btn btn-primary' %>
-    <% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center"><%= @dinner.name %></h3>
   </div>
+  <div class="panel-body">
+    <p>Hosted by: <%= @dinner.email %></p>
+    <p>When this is going down: <%= @dinner.date %> at <%= @dinner.time %></p>
+    <p>Where: <%= @dinner.location %></p>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Coming? Please RSVP</h2>
+  <div class="col-md-6">
+    <%= form_for dinner_setup(@dinner) do |f| %>
+      <div class="form-group">
+        <%= f.fields_for :guests do |g| %>
+          <%= g.label :Name %>:
+          <%= g.text_field :name, class: 'form-control', placeholder: 'your name' %>
+        <% end %>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= f.fields_for :courses do |g| %>
+        <%= g.label :Dish %>:
+        <%= g.text_field :name, class: 'form-control', placeholder: 'your bringing?' %>
+      <% end %>
+    </div>
+  </div>
+    <%= f.submit "RSVP", class: 'btn btn-primary' %>
+  <% end %>
 </div>
