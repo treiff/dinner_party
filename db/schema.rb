@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309135933) do
+ActiveRecord::Schema.define(version: 20150310183844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,18 +35,5 @@ ActiveRecord::Schema.define(version: 20150309135933) do
     t.string   "unique_url"
   end
 
-  create_table "guests", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
-    t.integer  "dinner_id"
-    t.integer  "course_id"
-  end
-
-  add_index "guests", ["course_id"], name: "index_guests_on_course_id", using: :btree
-  add_index "guests", ["dinner_id"], name: "index_guests_on_dinner_id", using: :btree
-
   add_foreign_key "courses", "dinners"
-  add_foreign_key "guests", "courses"
-  add_foreign_key "guests", "dinners"
 end
