@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'email_validator', '~> 1.5.0'
 # Use bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.3'
+# User newrelic for monitoring
+gem 'newrelic_rpm'
 
 gem 'jquery-rails'
 gem 'turbolinks'
