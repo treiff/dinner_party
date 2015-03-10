@@ -1,5 +1,9 @@
 <% provide(:title, "Dinner") %>
 
+<% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title text-center"><%= @dinner.name %></h3>
@@ -17,6 +21,7 @@
     <%= form_for dinner_setup(@dinner) do |f| %>
       <div class="form-group">
         <%= f.fields_for :guests do |g| %>
+        <%= render 'shared/error_messages' %>
           <%= g.label :Name %>:
           <%= g.text_field :name, class: 'form-control', placeholder: 'your name?' %>
         <% end %>

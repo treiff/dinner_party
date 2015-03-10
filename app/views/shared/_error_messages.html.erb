@@ -1,0 +1,12 @@
+<% if @dinner.errors.any? %>
+  <div class="alert alert-danger">
+    Sorry, your form contains <%= pluralize(@dinner.errors.count, "error") %>
+  </div>
+  <div class="alert alert-danger">
+    <ul>
+      <% @dinner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
