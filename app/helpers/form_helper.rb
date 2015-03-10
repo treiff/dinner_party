@@ -1,7 +1,6 @@
 module FormHelper
   def dinner_setup(dinner)
-    dinner.guests.build
-    dinner.courses.build
+    dinner.rsvps.build
     dinner
   end
 end

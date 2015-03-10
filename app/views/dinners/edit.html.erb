@@ -15,26 +15,18 @@
   </div>
 </div>
 
-<div class="row">
-  <h2>Coming? Please RSVP</h2>
-  <div class="col-md-6">
-    <%= form_for dinner_setup(@dinner) do |f| %>
-      <div class="form-group">
-        <%= f.fields_for :guests do |g| %>
-        <%= render 'shared/error_messages' %>
-          <%= g.label :Name %>:
-          <%= g.text_field :name, class: 'form-control', placeholder: 'your name?' %>
-        <% end %>
-      </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <%= f.fields_for :courses do |g| %>
-        <%= g.label :Dish %>:
-        <%= g.text_field :name, class: 'form-control', placeholder: 'your bringing?' %>
-      <% end %>
+<h2 class="text-center">Coming? Please RSVP</h2>
+<%= form_for dinner_setup(@dinner) do |f| %>
+  <%= f.fields_for :rsvps do |g| %>
+    <%= render 'shared/error_messages' %>
+
+    <div class="form-inline text-center">
+      <%= g.label :Name %>:
+      <%= g.text_field :name, class: 'form-control', placeholder: 'your name?' %>
+
+      <%= g.label :Dish %>:
+      <%= g.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
     </div>
-  </div>
-    <%= f.submit "RSVP", class: 'btn btn-primary' %>
   <% end %>
-</div>
+  <%= f.submit "RSVP", class: 'btn btn-primary' %>
+<% end %>
