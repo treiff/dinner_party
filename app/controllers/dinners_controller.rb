@@ -18,19 +18,6 @@ class DinnersController < ApplicationController
     @going = @dinner.rsvps
   end
 
-  def edit
-    @dinner = Dinner.find_by_unique_url(params[:id])
-  end
-
-  def update
-    @dinner = Dinner.find_by_unique_url(params[:id])
-    if @dinner.update_attributes(dinner_params)
-      redirect_to root_path, notice: "Great, see you there!"
-    else
-      render 'edit'
-    end
-  end
-
   private
 
   def dinner_params
