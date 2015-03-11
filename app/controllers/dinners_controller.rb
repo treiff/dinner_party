@@ -12,6 +12,12 @@ class DinnersController < ApplicationController
     end
   end
 
+  def show
+    @dinner = Dinner.find_by_unique_url(params[:id])
+    @rsvp = @dinner.rsvps.new
+    @going = @dinner.rsvps
+  end
+
   def edit
     @dinner = Dinner.find_by_unique_url(params[:id])
   end
@@ -28,7 +34,8 @@ class DinnersController < ApplicationController
   private
 
   def dinner_params
-    params.require(:dinner).permit(:name, :date, :time, :location, :email, :unique_url, rsvps_attributes:
-                                  [:name, :dish, :id])
+    params.require(:dinner).permit(:name, :date, :time, :location, :email, :unique_url)
   end
 end
+
+

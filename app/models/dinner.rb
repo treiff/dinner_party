@@ -8,14 +8,12 @@ class Dinner < ActiveRecord::Base
 
   has_many :rsvps
 
-  accepts_nested_attributes_for :rsvps, reject_if: ->(a) { a[:name].blank? }
-
   attr_readonly :email, :name, :date, :time, :location
 
   before_create :generate_unique_url
 
   def custom_url
-    "http://majormunch.herokuapp.com/dinners/#{unique_url}/edit"
+    "http://majormunch.herokuapp.com/dinners/#{unique_url}"
   end
 
   # Overides rails default to_param

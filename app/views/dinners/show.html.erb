@@ -12,21 +12,23 @@
     <p>Hosted by: <%= @dinner.email %></p>
     <p>When this is going down: <%= @dinner.date %> at <%= @dinner.time %></p>
     <p>Where: <%= @dinner.location %></p>
+    <% @going.each do |i| %>
+      <p><%= i.name %></p>
+    <% end %>
+
   </div>
 </div>
 
 <h2 class="text-center">Coming? Please RSVP</h2>
-<%= form_for dinner_setup(@dinner) do |f| %>
-  <%= f.fields_for :rsvps do |g| %>
-    <%= render 'shared/error_messages' %>
+<%= form_for @rsvp, url: dinner_rsvps_path(@dinner) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="form-inline text-center">
+    <%= f.hidden_field :dinner_id, value: @dinner.id %>
+    <%= f.label :Name %>:
+    <%= f.text_field :name, class: 'form-control', placeholder: 'your name?' %>
 
-    <div class="form-inline text-center">
-      <%= g.label :Name %>:
-      <%= g.text_field :name, class: 'form-control', placeholder: 'your name?' %>
-
-      <%= g.label :Dish %>:
-      <%= g.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
-    </div>
-  <% end %>
+    <%= f.label :Dish %>:
+    <%= f.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
+  </div>
   <%= f.submit "RSVP", class: 'btn btn-primary' %>
 <% end %>
