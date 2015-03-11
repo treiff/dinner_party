@@ -1,0 +1,34 @@
+<% provide(:title, "Dinner") %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center"><%= @dinner.name %></h3>
+  </div>
+  <div class="panel-body">
+    <p>Hosted by: <%= @dinner.email %></p>
+    <p>When this is going down: <%= @dinner.date %> at <%= @dinner.time %></p>
+    <p>Where: <%= @dinner.location %></p>
+    <% @going.each do |i| %>
+      <p><%= i.name %></p>
+    <% end %>
+
+  </div>
+</div>
+
+<h2 class="text-center">Coming? Please RSVP</h2>
+<%= form_for @rsvp, url: dinner_rsvps_path(@dinner) do |f| %>
+  <%= render 'shared/rsvp_error_messages' %>
+  <div class="form-inline text-center">
+    <%= f.hidden_field :dinner_id, value: @dinner.id %>
+    <%= f.label :Name %>:
+    <%= f.text_field :name, class: 'form-control', placeholder: 'your name?' %>
+
+    <%= f.label :Dish %>:
+    <%= f.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
+  </div>
+  <%= f.submit "RSVP", class: 'btn btn-primary' %>
+<% end %>

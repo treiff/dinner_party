@@ -11,42 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309135933) do
+ActiveRecord::Schema.define(version: 20150310185914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "courses", force: :cascade do |t|
-    t.string  "name"
-    t.integer "dinner_id"
-    t.integer "guest_id"
-  end
-
-  add_index "courses", ["dinner_id"], name: "index_courses_on_dinner_id", using: :btree
-
   create_table "dinners", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "name"
-    t.date     "date"
-    t.time     "time"
-    t.string   "location"
-    t.string   "email"
-    t.string   "unique_url"
+    t.string   "name",       null: false
+    t.date     "date",       null: false
+    t.time     "time",       null: false
+    t.string   "location",   null: false
+    t.string   "email",      null: false
+    t.string   "unique_url", null: false
   end
 
-  create_table "guests", force: :cascade do |t|
+  create_table "rsvps", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "dish",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "name"
     t.integer  "dinner_id"
-    t.integer  "course_id"
   end
 
-  add_index "guests", ["course_id"], name: "index_guests_on_course_id", using: :btree
-  add_index "guests", ["dinner_id"], name: "index_guests_on_dinner_id", using: :btree
+  add_index "rsvps", ["dinner_id"], name: "index_rsvps_on_dinner_id", using: :btree
 
-  add_foreign_key "courses", "dinners"
-  add_foreign_key "guests", "courses"
-  add_foreign_key "guests", "dinners"
+  add_foreign_key "rsvps", "dinners"
 end
