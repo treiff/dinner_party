@@ -21,7 +21,7 @@
 
 <h2 class="text-center">Coming? Please RSVP</h2>
 <%= form_for @rsvp, url: dinner_rsvps_path(@dinner) do |f| %>
-  <%= render 'shared/error_messages' %>
+  <%= render 'shared/rsvp_error_messages' %>
   <div class="form-inline text-center">
     <%= f.hidden_field :dinner_id, value: @dinner.id %>
     <%= f.label :Name %>:

@@ -1,0 +1,12 @@
+<% if @rsvp.errors.any? %>
+  <div class="alert alert-danger">
+    Sorry, your form contains <%= pluralize(@rsvp.errors.count, "error") %>
+  </div>
+  <div class="alert alert-danger">
+    <ul>
+      <% @rsvp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

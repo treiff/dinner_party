@@ -8,8 +8,6 @@ class Dinner < ActiveRecord::Base
 
   has_many :rsvps
 
-  attr_readonly :email, :name, :date, :time, :location
-
   before_create :generate_unique_url
 
   def custom_url
