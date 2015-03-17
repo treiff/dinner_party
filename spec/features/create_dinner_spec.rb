@@ -8,11 +8,11 @@ feature 'User creates a dinner' do
   end
 
   def fill_form
-    fill_in "name", with: "Joes awesome BBQ"
-    fill_in 'date', with: Time.new(2015, 05, 17)
-    fill_in 'time', with: Time.now.strftime("%H:%M")
-    fill_in 'location', with: "My house"
-    fill_in 'email', with: "trevor@example.com"
+    fill_in 'dinner_name', with: "Joes awesome BBQ"
+    fill_in 'dinner_date', with: Time.new(2015, 05, 17)
+    fill_in 'dinner_time', with: Time.now.strftime("%H:%M")
+    fill_in 'dinner_location', with: "My house"
+    fill_in 'dinner_email', with: "trevor@example.com"
     click_button 'Create Dinner'
   end
 
