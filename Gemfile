@@ -28,6 +28,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.2.1'
   # Use capybara for integration tests
   gem 'capybara', '~> 2.4.4'
+  # Use factory girl for generating test objects
+  gem 'factory_girl_rails', '~>4.5.0'
 end
 
 group :development do
