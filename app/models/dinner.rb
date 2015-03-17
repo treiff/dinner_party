@@ -4,7 +4,7 @@ class Dinner < ActiveRecord::Base
   validates :email, email: true, case_sensitive: false, presence: true
   validates :name, presence: true
   validates :date, presence: true
-  validate :date_cannot_be_in_the_past
+  validate :date_cannot_be_in_the_past, on: :create
   validates :time, presence: true
   validates :location, presence: true
 
