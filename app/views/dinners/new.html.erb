@@ -1,5 +1,7 @@
 <% provide(:title, "Home") %>
 
+<script>mixpanel.track_forms("#new_dinner", "Dinner Created");</script>
+
 <h1 class="text-center">Welcome!</h1>
 <h2 class="text-center">Lets invite some friends for dinner!</h2>
 
@@ -26,6 +28,6 @@
     <%= f.label :email %>:
     <%= f.text_field :email, class: 'form-control', placeholder: 'your email' %><br />
   </div>
-
   <%= f.submit "Create Dinner", class: 'btn btn-primary' %>
 <% end %>
+
