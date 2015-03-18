@@ -1,8 +1,5 @@
 <% provide(:title, "Dinner") %>
 
-<% flash.each do |name, msg| %>
-  <%= content_tag(:div, msg, class: "alert alert-info") %>
-<% end %>
 
 <div class="panel panel-success">
   <div class="panel-heading">
@@ -10,7 +7,7 @@
   </div>
   <div class="panel-body">
     <p>Hosted by: <span class="pull-right"><%= @dinner.email %></span></p>
-    <p>When this is going down:<span class="pull-right"><%= @dinner.date.strftime("%A, %b, %e") %> at <%= @dinner.time.strftime("%l:%M %P") %></span></p>
+    <p>When:<span class="pull-right"><%= @dinner.date.strftime("%A, %b, %e") %> at <%= @dinner.time.strftime("%l:%M %P") %></span></p>
     <p>Where: <span class="pull-right"><%= @dinner.location %></span></p>
   </div>
   <div class="container">
