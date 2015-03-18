@@ -16,13 +16,15 @@
   <div class="container">
     <table class="table table-striped">
       <tr>
-        <th class="text-center"><u>Who's down?</u></th>
+        <th class="text-center"><u>Who's coming?</u></th>
         <th class="text-center"><u>Bringing</u></th>
+        <th class="text-center"><u>can't make it?</u></th>
       </tr>
-      <% @going.each do |i| %>
+      <% @dinner.rsvps.each do |rsvp| %>
         <tr>
-          <td class="text-center"><%= i.name %></td>
-          <td class="text-center"><%= i.dish %></td>
+          <td class="text-center"><%= rsvp.name %></td>
+          <td class="text-center"><%= rsvp.dish %></td>
+          <td class="text-center"><%= link_to 'Edit', edit_dinner_rsvp_path(rsvp.dinner.slug, rsvp) %></td>
         </tr>
       <% end %>
     </table>

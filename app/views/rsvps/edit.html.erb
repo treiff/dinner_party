@@ -1,0 +1,18 @@
+<% provide(:title, "Edit RSVP") %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>
+
+<h2 class="text-center">Edit RSVP</h2>
+<%= form_for([@rsvp.dinner, @rsvp]) do |f| %>
+  <%= render 'shared/rsvp_error_messages' %>
+  <div class="form-inline text-center">
+    <%= f.label :Name %>:
+    <%= f.text_field :name, class: 'form-control', placeholder: 'your name?' %>
+
+    <%= f.label :Dish %>:
+    <%= f.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
+  </div>
+  <%= f.submit "RSVP", class: 'btn btn-primary' %>
+<% end %>

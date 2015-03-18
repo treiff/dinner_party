@@ -14,8 +14,7 @@ class DinnersController < ApplicationController
 
   def show
     @dinner = Dinner.find_by_slug(params[:id])
-    @rsvp = @dinner.rsvps.new
-    @going = @dinner.rsvps
+    @rsvp = Rsvp.new(dinner: @dinner)
   end
 
   private
