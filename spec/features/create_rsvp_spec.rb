@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 feature "User RSVP's to a dinner" do
   let!(:dinner) { Dinner.create(name: "my dinner", date: Time.now + (86400), time: Time.now,
                           location: "my house", email: "valid@example.com") }
@@ -10,8 +12,8 @@ feature "User RSVP's to a dinner" do
 
   scenario 'with nonvaild inputs' do
     visit dinner_path(dinner)
-    valid_form
-    expect(find_rsvp.length).to eq(1)
+    nonvalid_form
+    expect(find_rsvp.length).to eq(0)
   end
 
   def valid_form
