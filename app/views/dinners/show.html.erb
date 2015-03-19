@@ -22,7 +22,10 @@
             <%= rsvp.name %>
             <% if current_rsvp_user == rsvp %>
               <%= link_to edit_dinner_rsvp_path(rsvp.dinner.slug, rsvp) do %>
-                <i class="glyphicon glyphicon-pencil"></i></td>
+                <i class="glyphicon glyphicon-pencil"></i>
+              <% end %>
+              <%= link_to dinner_rsvp_path(@dinner.slug, rsvp), method: :delete do %>
+                <i class="glyphicon glyphicon-remove"></i>
               <% end %>
             <% end %>
           </td>
