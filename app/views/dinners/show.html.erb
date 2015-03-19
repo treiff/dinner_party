@@ -15,13 +15,18 @@
       <tr>
         <th class="text-center"><u>Who's coming?</u></th>
         <th class="text-center"><u>Bringing</u></th>
-        <th class="text-center"><u>can't make it?</u></th>
       </tr>
       <% @dinner.rsvps.each do |rsvp| %>
         <tr>
-          <td class="text-center"><%= rsvp.name %></td>
+          <td class="text-center">
+            <%= rsvp.name %>
+            <% if current_rsvp_user == rsvp %>
+              <%= link_to edit_dinner_rsvp_path(rsvp.dinner.slug, rsvp) do %>
+                <i class="glyphicon glyphicon-pencil"></i></td>
+              <% end %>
+            <% end %>
+          </td>
           <td class="text-center"><%= rsvp.dish %></td>
-          <td class="text-center"><%= link_to 'Edit', edit_dinner_rsvp_path(rsvp.dinner.slug, rsvp) %></td>
         </tr>
       <% end %>
     </table>
@@ -38,6 +43,6 @@
 
     <%= f.label :Dish %>:
     <%= f.text_field :dish, class: 'form-control', placeholder: 'your bringing?' %>
+    <%= f.submit "RSVP", class: 'btn btn-primary' %>
   </div>
-  <%= f.submit "RSVP", class: 'btn btn-primary' %>
 <% end %>
