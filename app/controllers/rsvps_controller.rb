@@ -25,6 +25,13 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def destroy
+    dinner = Dinner.find_by_slug(params[:dinner_id])
+    dinner.rsvps.find(params[:id]).destroy
+    flash[:success] = "RSVP deleted"
+    redirect_to dinner_path(dinner)
+  end
+
   private
 
   def rsvp_params
