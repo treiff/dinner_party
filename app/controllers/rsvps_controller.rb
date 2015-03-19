@@ -9,6 +9,10 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   def edit
     dinner = Dinner.find_by_slug(params[:dinner_id])
     @rsvp = dinner.rsvps.find(params[:id])
