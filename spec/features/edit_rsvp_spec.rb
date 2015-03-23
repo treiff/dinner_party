@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'User edits RSVP' do
   before(:each) do
     @dinner = Dinner.create(name: "my dinner", date: Time.now + (86400), time: Time.now,
-                          location: "my house", email: "valid@example.com")
+                            location: "my house", email: "valid@example.com")
     @rsvp = Rsvp.create(name: "Trevor", dish: "Tacos", dinner_id: @dinner.id)
   end
 

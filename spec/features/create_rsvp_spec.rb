@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "User RSVP's to a dinner" do
   let!(:dinner) { Dinner.create(name: "my dinner", date: Time.now + (86400), time: Time.now,
-                          location: "my house", email: "valid@example.com") }
+                                location: "my house", email: "valid@example.com") }
 
   scenario 'with vaild inputs' do
     visit dinner_path(dinner)
